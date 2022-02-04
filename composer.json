@@ -1,0 +1,45 @@
+{
+    "name": "codelicia/xulieta-php",
+    "description": "Xulieta plugin to validate PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Codelicia\\XulietaPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jefersson Nathan",
+            "email": "malukenho.dev@gmail.com"
+        },
+        {
+            "name": "Alexandre Eher",
+            "email": "alexandre@eher.com.br"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "ocramius/package-versions": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "xulieta": {
+            "validator": ["Codelicia\\XulietaPhp\\PhpValidator"]
+        }
+    },
+    "require-dev": {
+        "codelicia/xulieta": "1.0.x-dev as 1.0.0",
+        "doctrine/coding-standard": "^9.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "phpunit": "vendor/bin/phpunit",
+        "phpcs": "vendor/bin/phpcs",
+        "test": [
+            "@phpcs",
+            "@phpunit"
+        ]
+    }
+}
