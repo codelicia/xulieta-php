@@ -20,7 +20,7 @@ class PhpValidator implements Validator
 {
     private PhpParser $phpParser;
 
-    public function __construct(?PhpParser $phpParser = null)
+    public function __construct(PhpParser|null $phpParser = null)
     {
         $this->phpParser = $phpParser ?? (new ParserFactory())->create(ParserFactory::PREFER_PHP7);
     }
@@ -34,9 +34,9 @@ class PhpValidator implements Validator
     {
         try {
             $this->phpParser->parse(
-                $this->ensureCodePrefix($sampleCode->code())
+                $this->ensureCodePrefix($sampleCode->code()),
             );
-        } catch (Throwable $e) {
+        } catch (Throwable) {
             return true;
         }
 
@@ -47,7 +47,7 @@ class PhpValidator implements Validator
     {
         try {
             $this->phpParser->parse(
-                $this->ensureCodePrefix($sampleCode->code())
+                $this->ensureCodePrefix($sampleCode->code()),
             );
         } catch (Throwable $e) {
             preg_match('{on line (\d+)}', $e->getMessage(), $line);
