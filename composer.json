@@ -21,7 +21,8 @@
     "config": {
         "allow-plugins": {
             "ocramius/package-versions": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "codelicia/xulieta": true
         }
     },
     "extra": {
