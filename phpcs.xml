@@ -13,6 +13,7 @@
     <arg value="p"/>
 
     <file>src</file>
+    <file>tests</file>
 
     <rule ref="Doctrine">
         <!-- Ignore type hinting check, it should be done by psalm -->

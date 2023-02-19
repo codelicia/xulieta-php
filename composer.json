@@ -36,8 +36,9 @@
         "phpunit/phpunit": "^10.0"
     },
     "scripts": {
-        "phpunit": "vendor/bin/phpunit",
+        "phpcbf": "vendor/bin/phpcbf",
         "phpcs": "vendor/bin/phpcs",
+        "phpunit": "vendor/bin/phpunit",
         "test": [
             "@phpcs",
             "@phpunit"
