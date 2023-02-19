@@ -8,6 +8,11 @@
             "Codelicia\\XulietaPhp\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Codelicia\\XulietaPhp\\Test\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Jefersson Nathan",
