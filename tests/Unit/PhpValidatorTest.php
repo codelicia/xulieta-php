@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Codelicia\Xulieta\Unit\Validator;
+namespace Codelicia\XulietaPhp\Test\Unit;
 
 use Codelicia\Xulieta\Validator\PhpValidator;
 use Codelicia\Xulieta\ValueObject\SampleCode;
